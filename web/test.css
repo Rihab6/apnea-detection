@@ -1,0 +1,10 @@
+/*
+color-1: #debce1; 
+
+*/
+:root{
+    color1=#debce1;
+}
+div{
+    background-color: var(color1);
+}

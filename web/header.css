@@ -1,0 +1,35 @@
+header{
+    background-color: #FFF;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    padding: 0px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.navbar{
+    display: flex;
+    position:fixed;
+    padding-left: 365px;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: rgb(156, 64, 156);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+
+}
+header .navbar li a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+

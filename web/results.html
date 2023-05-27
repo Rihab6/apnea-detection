@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>RESULTS PAGE </title>
+    <link rel="shortcut icon" type="image" href="lggg.PNG">
+
+    <header>
+        <a href="#" class="logo">
+        
+            <img src="logo.png"  width="250" height="100">
+         <ul class="navbar">
+            <li> <a ></a></li>
+           <li> <a href="home.html">Home</a></li>
+           <li> <a href="Aboutus.html">About Us</a></li>
+          
+           <li> <a href="steps.html"> Steps</a></li>
+           
+           <li> <a href="contact.html">Contact Us</a></li>
+           <li>
+               <a href="login.html">Log In</a></li>
+               <li> <a href="signup.html">Sign Up</a> </li>
+             
+               <li style="padding-left: 11px;">
+                   <form>
+                    <select>
+                        <option>English</option>
+                         <option>French</option>
+                    </select>
+                   </form>
+                </li>
+       </ul>
+    </header>
+</head>
+<body>
+    <br>  <br>  <br>  <br>  <br> 
+    <div style="width: 70% ; height: 40%; padding-left: 9rem; ">
+        <canvas id="graph1"  role="img" ></canvas>
+    </div>   
+
+      
+     <br> 
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <a  href="contact.html"> <strong>Contact Us</strong></a>
+               </div>
+               <div class="footer-center">
+                    <a  href="Aboutus.html"> <strong>About Us</strong></a>
+        
+               </div>
+               <div class="footer-center">
+                    <a  href="signup.html"> <strong>Sign Up </strong></a>
+                </div>
+                <div class="footer-center">
+                    <a  href="home.html"> <strong> Home  </strong></a>
+               </div>
+                
+            </div>
+            
+        </div>
+        <footer class="copyright"><div >
+            2023© , All rights reserved
+           </div> </footer>
+       
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var ctx = document.getElementById('graph1').getContext('2d');
+
+        var data = {
+        labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60','65', '70', '75', '80', '85', '90', '95', '100', '105', '110', '115', '120', '125'],
+        datasets: [{
+            label: 'OXYGEN LEVEL',
+            data: [94, 95, 95, 95, 95, 92, 90, 90, 90, 93, 95, 95, 95, 95, 95, 95, 95,92, 95, 95, 95, 95, 92, 90, 90, 90, 93, 95, 95, 95, 95, 95, 95, 95],
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 2,
+            fill: false
+            
+        }]
+        };
+
+        var options = {
+    scales: {
+        xAxes: [{
+            
+            scaleLabel: {
+                display: true,
+                labelString: 'TIME(Sec)',
+                fontColor: "#151A7B",
+                fontWeight: "bold"
+            }
+        }],
+        yAxes: [{
+            
+            scaleLabel: {
+                display: true,
+                labelString: 'OXYGEN SATURATION(%)',
+                fontColor: "#151A7B",
+                fontWeight: "bold"
+            }
+        }]
+    }
+};
+
+        var chart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+        
+        });
+
+    </script>
+</body>
+</html>
+
